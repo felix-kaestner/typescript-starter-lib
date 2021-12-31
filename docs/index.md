@@ -6,6 +6,7 @@
 
 ## Packages
 
-| Package                                               | Description |
-| ----------------------------------------------------- | ----------- |
-| [typeScript-starter-lib](./typescript-starter-lib.md) |             |
+|  Package | Description |
+|  --- | --- |
+|  [typeScript-starter-lib](./typescript-starter-lib.md) |  |
+
