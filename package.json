@@ -14,6 +14,14 @@
     "dist",
     "types"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "default": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "script": "./dist/index.umd.js"
+    }
+  },
   "repository": "https://github.com/felix-kaestner/TypeScript-Starter-Lib",
   "homepage": "https://github.com/felix-kaestner/TypeScript-Starter-Lib",
   "license": "MIT",
