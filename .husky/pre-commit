@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-git diff --quiet HEAD main -- src || yarn run docs
+if ! git diff --cached --quiet HEAD -- src; then
+  yarn run docs
+fi
 npx --no-install lint-staged
