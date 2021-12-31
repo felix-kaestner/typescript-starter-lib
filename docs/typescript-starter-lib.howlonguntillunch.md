@@ -9,19 +9,18 @@ Calculate the time until lunch
 <b>Signature:</b>
 
 ```typescript
-export default function howLongUntilLunch(hours?: number, minutes?: number): string;
+export default function howLongUntilLunch(hours?: number, minutes?: number): string
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  hours | number | Hours until lunch |
-|  minutes | number | Minutes until lunch |
+| Parameter | Type   | Description         |
+| --------- | ------ | ------------------- |
+| hours     | number | Hours until lunch   |
+| minutes   | number | Minutes until lunch |
 
 <b>Returns:</b>
 
 string
 
 The time until lunch
-

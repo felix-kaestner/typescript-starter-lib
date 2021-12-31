@@ -6,7 +6,6 @@
 
 ## Functions
 
-|  Function | Description |
-|  --- | --- |
-|  [howLongUntilLunch(hours, minutes)](./typescript-starter-lib.howlonguntillunch.md) | Calculate the time until lunch |
-
+| Function                                                                           | Description                    |
+| ---------------------------------------------------------------------------------- | ------------------------------ |
+| [howLongUntilLunch(hours, minutes)](./typescript-starter-lib.howlonguntillunch.md) | Calculate the time until lunch |

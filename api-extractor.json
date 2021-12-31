@@ -22,7 +22,17 @@
     /**
      * (REQUIRED) Whether to generate an API report.
      */
-    "enabled": true
+    "enabled": true,
+
+    /**
+     * Specifies the folder where the API report file is written.
+     * The file name portion is determined by the \"reportFileName\" setting.
+     * The API report file is normally tracked by Git.
+     * Changes to it can be used to trigger a branch policy, e.g. for an API review.
+     * The path is resolved relative to the folder of the config file that contains
+     * the setting; to change this, prepend a folder token such as \"<projectFolder>\".
+     */
+    "reportFolder": "<projectFolder>/temp/"
   },
 
   /**
@@ -59,9 +69,40 @@
   },
 
   /**
+   * Configures how the tsdoc-metadata.json file will be generated.
+   */
+  "tsdocMetadata": {
+    /**
+     * Whether to generate the tsdoc-metadata.json file.
+     */
+    "enabled": false
+  },
+
+  /**
    * Specifies what type of newlines API Extractor should use when writing output files.
    *
    * DEFAULT VALUE: "crlf"
    */
-  "newlineKind": "lf"
+  "newlineKind": "lf",
+
+  /**
+   * Configures how API Extractor reports error and warning messages produced during analysis.
+   */
+  "messages": {
+    /**
+     * Configures handling of messages from the TSDoc parser (i.e. code comment syntax)
+     */
+    "tsdocMessageReporting": {
+      // By default, errors  are shown on the console and will break a production build
+      "default": {"logLevel": "warning"},
+
+      // Write unsupported and undefined tags into the API review file
+      "tsdoc-undefined-tag": {"logLevel": "none", "addToApiReportFile": true},
+      "tsdoc-unsupported-tag": {"logLevel": "none", "addToApiReportFile": true},
+
+      // "The `}` character should be escaped using a backslash to avoid confusion
+      // with a TSDoc inline tag."
+      "tsdoc-escape-right-brace": {"logLevel": "none"}
+    }
+  }
 }

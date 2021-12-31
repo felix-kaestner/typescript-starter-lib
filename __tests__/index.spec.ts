@@ -46,7 +46,7 @@ class MockDate {
   }
 }
 
-global.Date = (MockDate as any) as typeof Date
+global.Date = MockDate as unknown as typeof Date
 
 const date = new MockDate()
 Date.now = function now() {

@@ -6,4 +6,4 @@
  * @returns The time until lunch
  * @public
  */
-export default function howLongUntilLunch(hours?: number, minutes?: number): string;
+export default function howLongUntilLunch(hours?: number, minutes?: number): string

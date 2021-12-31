@@ -6,4 +6,4 @@
  * @returns The next lunch time
  * @public
  */
-export default function getNextLunchtime(hours: number, minutes: number): Date;
+export default function getNextLunchtime(hours: number, minutes: number): Date

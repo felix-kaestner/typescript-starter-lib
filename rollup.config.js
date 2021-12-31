@@ -1,5 +1,5 @@
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import typescript from '@rollup/plugin-typescript'
 import {terser} from 'rollup-plugin-terser'
@@ -21,6 +21,8 @@ export default [
       replace({
         // hard coded dev/prod builds
         __DEV__: !isProduction,
+        // see: https://github.com/rollup/plugins/tree/master/packages/replace#preventassignment
+        preventAssignment: true,
       }),
       isProduction && terser(), // minify, but only in production
     ].filter(Boolean),
@@ -41,6 +43,8 @@ export default [
       replace({
         // preserve to be handled by bundlers
         __DEV__: `(process.env.NODE_ENV !== 'production')`,
+        // see: https://github.com/rollup/plugins/tree/master/packages/replace#preventassignment
+        preventAssignment: true,
       }),
       isProduction && terser(), // minify, but only in production
     ].filter(Boolean),

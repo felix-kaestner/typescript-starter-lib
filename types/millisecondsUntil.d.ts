@@ -5,4 +5,4 @@
  * @returns The number of of milliseconds until the given Date
  * @public
  */
-export default function millisecondsUntil(date: Date): number;
+export default function millisecondsUntil(date: Date): number
