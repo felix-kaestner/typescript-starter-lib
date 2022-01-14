@@ -56,7 +56,12 @@ Date.now = function now() {
 describe('how long till lunch', () => {
   const lunchtime = [12, 30]
 
-  function testTime(hours: number, minutes: number, seconds: number, expected: string): void {
+  function testTime(
+    hours: number,
+    minutes: number,
+    seconds: number,
+    expected: string
+  ): void {
     date.setHours(hours)
     date.setMinutes(minutes)
     date.setSeconds(seconds)

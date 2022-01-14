@@ -9,7 +9,8 @@ import pkg from './package.json'
 /**
  * Flag to indicate build of library
  */
-const isProduction = !process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'production'
+const isProduction =
+  !process.env.ROLLUP_WATCH || process.env.NODE_ENV === 'production'
 
 export default defineConfig([
   {
@@ -43,7 +44,10 @@ export default defineConfig([
   },
   {
     input: 'src/index.ts',
-    external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
+    external: [
+      ...Object.keys(pkg.dependencies || {}),
+      ...Object.keys(pkg.peerDependencies || {}),
+    ],
     output: [
       {
         file: pkg.main,

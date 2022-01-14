@@ -11,6 +11,8 @@ import millisecondsUntil from './millisecondsUntil'
  * @public
  */
 export default function howLongUntilLunch(hours = 12, minutes = 30): string {
-  const millisecondsUntilLunchTime = millisecondsUntil(lunchtime(hours, minutes))
+  const millisecondsUntilLunchTime = millisecondsUntil(
+    lunchtime(hours, minutes)
+  )
   return ms(millisecondsUntilLunchTime, {long: true})
 }

@@ -16,7 +16,8 @@ export default function getNextLunchtime(hours: number, minutes: number): Date {
 
   // if we've already had lunch today, start planning
   // tomorrow's lunch
-  if (lunchtime.getTime() < Date.now()) lunchtime.setDate(lunchtime.getDate() + 1)
+  if (lunchtime.getTime() < Date.now())
+    lunchtime.setDate(lunchtime.getDate() + 1)
 
   return lunchtime
 }
