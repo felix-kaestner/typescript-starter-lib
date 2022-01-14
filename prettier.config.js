@@ -3,6 +3,7 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'es5',
   semi: false,
-  printWidth: 100,
-  importOrder: ['^@/(.*)$', '^[~/]', '^[./]'],
+  printWidth: 80,
+  importOrder: ['<THIRD_PARTY_MODULES>', '^@/(.*)$', '^[~/]', '^[./]'],
+  importOrderSortSpecifiers: true,
 }
