@@ -5,8 +5,9 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
-  "unpkg": "dist/index.umd.js",
   "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.global.js",
+  "jsdelivr": "dist/index.global.js",
   "jsnext:main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "typings": "types/index.d.ts",
@@ -38,7 +39,7 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir types",
     "test": "jest",
     "test:dev": "jest --watchAll",
-    "coverage": "jest --coverage",
+    "test:coverage": "jest --coverage",
     "lint": "eslint --ext .ts --ext .js .",
     "lint:fix": "eslint --ext .ts --ext .js --fix .",
     "lint:types": "tsc --pretty --noEmit",
@@ -102,5 +103,8 @@
     "node": ">= 12.0.0",
     "npm": ">= 6.9",
     "yarn": ">= 1.20.x"
+  },
+  "buildOptions": {
+    "name": "TypeScriptStarterLibrary"
   }
 }
