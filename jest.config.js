@@ -1,17 +1,15 @@
-import pkg from './package.json'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const pkg = require('./package.json')
 
 /** @type {import('@jest/types').Config.InitialOptions} */
-export default {
-  preset: 'ts-jest/presets/default-esm',
+module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'node',
   testPathIgnorePatterns: ['/node_modules/', '/types/'],
   globals: {
     __DEV__: true,
     __TEST__: true,
     __VERSION__: pkg.version,
-    'ts-jest': {
-      useESM: true,
-    },
   },
   moduleNameMapper: {
     '^@/(.*)': '<rootDir>/src/$1',

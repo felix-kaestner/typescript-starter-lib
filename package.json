@@ -47,7 +47,7 @@
     "api:document": "api-documenter markdown --input-folder temp --output-folder docs",
     "api:git": "git add --renormalize types docs",
     "docs": "npm-run-all build:types api:extract api:document api:git",
-    "clean": "rimraf types temp dist",
+    "clean": "rimraf types types temp dist",
     "prepare": "husky install"
   },
   "dependencies": {

@@ -5,15 +5,24 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Jest",
       "type": "node",
       "request": "launch",
-      "name": "Jest Test Current file",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "cwd": "${workspaceFolder}",
-      "args": ["--runInBand", "--no-cache", "--no-coverage", "${fileBasename}"],
+      "args": [
+        "--runInBand",
+        "--no-cache",
+        "--no-coverage",
+        "--detectOpenHandles",
+        "${fileBasename}"
+      ],
       "sourceMaps": true,
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "development"
+      }
     }
   ]
 }
