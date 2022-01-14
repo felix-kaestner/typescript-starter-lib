@@ -10,10 +10,8 @@
   "jsdelivr": "dist/index.global.js",
   "jsnext:main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "typings": "types/index.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "exports": {
     ".": {
