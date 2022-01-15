@@ -21,10 +21,9 @@
       "script": "./dist/index.umd.js"
     }
   },
-  "repository": "https://github.com/felix-kaestner/TypeScript-Starter-Lib",
+  "repository": "git://github.com/felix-kaestner/TypeScript-Starter-Lib",
   "homepage": "https://github.com/felix-kaestner/TypeScript-Starter-Lib",
   "license": "MIT",
-  "private": true,
   "sideEffects": false,
   "author": {
     "name": "Felix Kästner",
@@ -47,7 +46,7 @@
     "api:document": "api-documenter markdown --input-folder temp --output-folder docs",
     "api:git": "git add --renormalize types docs",
     "docs": "npm-run-all build:types api:extract api:document api:git",
-    "clean": "rimraf types types temp dist",
+    "clean": "rimraf types types temp dist coverage",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -62,6 +61,10 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-replace": "^3.0.1",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
     "@trivago/prettier-plugin-sort-imports": "^3.1.1",
     "@types/jest": "^27.4.0",
     "@types/ms": "^0.7.31",
@@ -80,6 +83,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.63.0",
     "rollup-plugin-terser": "^7.0.0",
+    "semantic-release": "^18.0.1",
     "ts-jest": "^26.5.6",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4"
@@ -104,5 +108,8 @@
   },
   "buildOptions": {
     "name": "TypeScriptStarterLibrary"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
