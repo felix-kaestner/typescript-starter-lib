@@ -8,7 +8,7 @@ on:
     types: [completed]
 
 jobs:
-  worker:
+  dependabot:
     runs-on: ubuntu-latest
 
     if: "github.event.workflow_run.conclusion == 'success' && github.actor == 'dependabot[bot]'"
