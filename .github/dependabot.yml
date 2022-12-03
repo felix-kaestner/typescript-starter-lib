@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: weekly
+      interval: daily
       time: '00:00'
     open-pull-requests-limit: 5
     commit-message:
@@ -15,13 +15,9 @@ updates:
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
-      interval: monthly
+      interval: weekly
       time: '00:00'
     open-pull-requests-limit: 2
-    reviewers:
-      - felix-kaestner
-    assignees:
-      - felix-kaestner
     commit-message:
       prefix: fix
       prefix-development: chore
