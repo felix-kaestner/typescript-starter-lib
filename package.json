@@ -21,8 +21,8 @@
       "script": "./dist/index.umd.js"
     }
   },
-  "repository": "git://github.com/felix-kaestner/TypeScript-Starter-Lib",
-  "homepage": "https://github.com/felix-kaestner/TypeScript-Starter-Lib",
+  "repository": "git://github.com/felix-kaestner/typescript-starter-lib",
+  "homepage": "https://github.com/felix-kaestner/typescript-starter-lib",
   "license": "MIT",
   "sideEffects": false,
   "author": {
