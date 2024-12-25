@@ -6,7 +6,24 @@
 
 ## Packages
 
-|  Package | Description |
-|  --- | --- |
-|  [typeScript-starter-lib](./typescript-starter-lib.md) |  |
+<table><thead><tr><th>
 
+Package
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[typeScript-starter-lib](./typescript-starter-lib.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

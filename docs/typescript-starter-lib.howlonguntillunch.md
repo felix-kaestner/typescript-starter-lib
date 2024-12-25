@@ -6,7 +6,7 @@
 
 Calculate the time until lunch
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export default function howLongUntilLunch(hours?: number, minutes?: number): string;
@@ -14,12 +14,56 @@ export default function howLongUntilLunch(hours?: number, minutes?: number): str
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  hours | number | Hours until lunch |
-|  minutes | number | Minutes until lunch |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+hours
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ Hours until lunch
+
+
+</td></tr>
+<tr><td>
+
+minutes
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ Minutes until lunch
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 string
 
