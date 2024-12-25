@@ -64,9 +64,11 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Create package ⚡
+        if: "matrix.node-version == '20.x'"
         run: yarn pack
 
       - name: Upload package 🔥
+        if: "matrix.node-version == '20.x'"
         uses: actions/upload-artifact@v4
         with:
           name: package
